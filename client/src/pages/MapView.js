@@ -40,7 +40,7 @@ export default function MapView() {
   // Fetch requests
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/waste-requests");
+      const res = await axios.get(`${API_BASE_URL}/api/waste-requests`);
       setRequests(res.data);
     } catch (err) {
       console.error("Error fetching requests:", err);

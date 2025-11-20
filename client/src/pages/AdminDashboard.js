@@ -29,7 +29,7 @@ export default function AdminDashboard() {
     const token = localStorage.getItem("token");
     try {
       await axios.put(
-        `http://localhost:5000/api/waste-requests/${id}`,
+        `${API_BASE_URL}/api/waste-requests/${id}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );

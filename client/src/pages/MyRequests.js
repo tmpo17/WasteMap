@@ -15,7 +15,7 @@ export default function MyRequests() {
     }
 
     axios
-      .get("http://localhost:5000/api/waste-requests/mine", {
+      .get(`${API_BASE_URL}/api/waste-requests/mine`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setRequests(res.data))

@@ -6,23 +6,23 @@ import User from '../models/User.js';
 const router = express.Router();
 
 // Register new user
-router.post('/register', async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
     const existing = await User.findOne({ email });
     if (existing) {
-      return res.status(400).json({ message: 'Email already in use' });
+      return res.status(400).json({ message: "Email already in use" });
     }
 
     const hashed = await bcrypt.hash(password, 10);
     const newUser = new User({ name, email, password: hashed });
     await newUser.save();
 
-    res.json({ message: 'User registered successfully' });
+    res.json({ message: "User registered successfully" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
+    console.error("REGISTER ERROR →", error);
+    res.status(500).json({ message: error.message });
   }
 });
 

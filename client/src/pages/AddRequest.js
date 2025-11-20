@@ -46,7 +46,7 @@ useEffect(() => {
 
 
         await axios.post(
-  'http://localhost:5000/api/waste-requests',
+  `${API_BASE_URL}/api/waste-requests`,
   payload,
   { headers: { Authorization: `Bearer ${token}` } }
 );

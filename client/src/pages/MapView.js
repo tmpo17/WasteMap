@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import API_BASE_URL from "../api";
+
 
 // Fix the default icon path issue
 import marker2x from "leaflet/dist/images/marker-icon-2x.png";

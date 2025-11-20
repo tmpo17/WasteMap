@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../api";
+
 
 export default function AdminDashboard() {
   const [requests, setRequests] = useState([]);
@@ -18,7 +20,7 @@ export default function AdminDashboard() {
     }
 
     axios
-      .get("http://localhost:5000/api/waste-requests", {
+      .get(`${API_BASE_URL}/api/waste-requests`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setRequests(res.data))

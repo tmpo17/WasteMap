@@ -17,5 +17,6 @@
 - Live deployment links
 
 ### Demo
-Frontend : https://wastemap.vercel.app  
-Backend : https://wastemap-backend.onrender.com
+Frontend : https://waste-map-two.vercel.app/
+Backend : https://wastemap.onrender.com/
+Showcase : https://youtu.be/2GGy6Uj54KM
